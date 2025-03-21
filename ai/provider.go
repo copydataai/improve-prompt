@@ -35,3 +35,21 @@ EXPLANATIONS:
 
 	return provider.Generate(improvementPrompt)
 }
+
+// ImprovePromptSimple improves a prompt using the given AI provider without explanations
+func ImprovePromptSimple(prompt string, provider Provider) (string, error) {
+	improvementPrompt := `You are an AI prompt engineer with extensive expertise in crafting effective prompts.
+Your task is to improve the following prompt to make it more clear, specific, and effective.
+Consider clarity, specificity, context, structure, and precise language.
+
+Here's the prompt to improve:
+
+"""
+` + prompt + `
+"""
+
+Provide ONLY the improved version of the prompt without any explanations or additional text.
+`
+
+	return provider.Generate(improvementPrompt)
+}
