@@ -2,7 +2,7 @@
 
 A CLI tool that enhances AI prompts using OpenAI or local Ollama models.
 
-![CLI Demo](https://via.placeholder.com/800x200?text=Demo+Coming+Soon)
+![CLI Demo](https://github.com/copydataai/improve-prompt/blob/95d8e1a1d0615c4a5aa6ca1bb15047a81d2240ed/impv.gif)
 
 ## Features 🚀
 
