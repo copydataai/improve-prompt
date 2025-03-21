@@ -12,7 +12,7 @@ for AI models. It uses AI to analyze and enhance your prompts,
 making them more effective for your specific use case.
 
 It supports various AI providers including local models through Ollama.`,
-	Run: improveCmd.Run,
+	RunE: improveFunc,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -25,4 +25,8 @@ func init() {
 	rootCmd.PersistentFlags().StringP("model", "m", "gpt-4o-mini", "AI model to use for improving prompts")
 	rootCmd.PersistentFlags().StringP("provider", "p", "openai", "AI provider to use (openai, ollama)")
 	rootCmd.PersistentFlags().StringP("server", "s", "http://localhost:11434", "Server address for Ollama")
+
+	rootCmd.Flags().StringP("input", "i", "", "Input file containing the prompt")
+	rootCmd.Flags().StringP("output", "o", "", "Output file to write the improved prompt")
+	rootCmd.Flags().BoolP("verbose", "v", false, "includes and")
 }
