@@ -41,7 +41,6 @@ func (p *OllamaProvider) Generate(prompt string) (string, error) {
 		Prompt: prompt,
 		Stream: false,
 	}
-	fmt.Println("Request Body:", reqBody)
 	jsonData, err := json.Marshal(reqBody)
 	if err != nil {
 		return "", fmt.Errorf("failed to marshal request: %w", err)
